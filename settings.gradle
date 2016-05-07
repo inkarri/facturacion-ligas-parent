@@ -1,0 +1,9 @@
+rootProject.name = 'facturacion-ligas-parent'
+include ':facturacion-ligas-core'
+include ':facturacion-ligas-ws'
+include ':facturacion-ligas-ear'
+
+project(':facturacion-ligas-core').projectDir = "$rootDir/facturacion-ligas-core" as File
+project(':facturacion-ligas-ws').projectDir = "$rootDir/facturacion-ligas-ws" as File
+project(':facturacion-ligas-ear').projectDir = "$rootDir/facturacion-ligas-ear" as File
+

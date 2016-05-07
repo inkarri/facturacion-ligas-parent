@@ -1,0 +1,14 @@
+apply plugin: 'java'
+description = 'facturacion-ligas-core'
+task packageSources(type: Jar) {
+	classifier = 'sources'
+	from sourceSets.main.allSource
+}
+
+artifacts.archives packageSources
+
+dependencies {
+	 compile group: 'org.jboss.spec.javax.ejb', name: 'jboss-ejb-api_3.1_spec', version: '1.0.1.Final'
+	 compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.0-api', version: '1.0.1.Final'
+	 compile group: 'org.hibernate', name: 'hibernate-core', version: '4.0.1.Final'
+}

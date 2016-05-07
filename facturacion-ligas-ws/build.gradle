@@ -1,0 +1,6 @@
+apply plugin: 'war'
+jar.enabled = false
+description = 'facturacion-ligas-ws'
+war{
+  archiveName 'facturacion-ligas-ws.war'
+}

@@ -1,0 +1,12 @@
+apply plugin: 'ear'
+description = 'facturacion-ligas-ear'
+
+dependencies {
+  deploy project(path:':facturacion-ligas-ws', configuration: 'archives')
+  add ('earlib', project(':facturacion-ligas-ws')) 
+}
+
+ear {
+	archiveName 'facturacion-ligas-ear.ear'
+	exclude 'application.xml'
+}
