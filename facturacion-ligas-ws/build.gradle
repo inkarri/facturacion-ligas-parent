@@ -1,6 +1,15 @@
 apply plugin: 'war'
+
 jar.enabled = false
 description = 'facturacion-ligas-ws'
+
 war{
   archiveName 'facturacion-ligas-ws.war'
+}
+
+dependencies {
+	providedCompile project(':facturacion-ligas-core')
+ 	//providedCompile group: 'ec.com.facturacion', name: 'facturacion-ligas-core', version: '1.0.0-SNAPSHOT'
+ 	providedCompile group: 'org.jboss.spec.javax.ws.rs', name: 'jboss-jaxrs-api_2.0_spec', version: '1.0.0.Final'
+ 	providedCompile group: 'org.jboss.spec.javax.servlet', name: 'jboss-servlet-api_3.0_spec', version: '1.0.0.Final'
 }

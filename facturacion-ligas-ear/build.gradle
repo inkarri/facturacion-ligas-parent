@@ -3,7 +3,11 @@ description = 'facturacion-ligas-ear'
 
 dependencies {
   deploy project(path:':facturacion-ligas-ws', configuration: 'archives')
-  add ('earlib', project(':facturacion-ligas-ws')) 
+  //deploy project(path:':facturacion-ligas-core', configuration: 'archives')
+  //add ('earlib', project(':facturacion-ligas-ws')) 
+   // add ('earlib', project(':facturacion-ligas-ws')) {
+     //   exclude group: 'ec.com.facturacion', module: 'facturacion-ligas-core'
+   //}
 }
 
 ear {

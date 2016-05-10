@@ -1,5 +1,7 @@
 apply plugin: 'java'
+
 description = 'facturacion-ligas-core'
+
 task packageSources(type: Jar) {
 	classifier = 'sources'
 	from sourceSets.main.allSource
