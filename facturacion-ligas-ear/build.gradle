@@ -3,14 +3,15 @@ description = 'facturacion-ligas-ear'
 
 dependencies {
   deploy project(path:':facturacion-ligas-ws', configuration: 'archives')
-  //deploy project(path:':facturacion-ligas-core', configuration: 'archives')
-  //add ('earlib', project(':facturacion-ligas-ws')) 
-   // add ('earlib', project(':facturacion-ligas-ws')) {
-     //   exclude group: 'ec.com.facturacion', module: 'facturacion-ligas-core'
-   //}
+  deploy project(path:':facturacion-ligas-core', configuration: 'archives')
+  add('earlib', project(':facturacion-ligas-ws')) {
+     exclude module: 'facturacion-ligas-core'
+  }
+  earlib project(path: ':facturacion-ligas-core', configuration: 'compile')
 }
 
 ear {
 	archiveName 'facturacion-ligas-ear.ear'
+	exclude '*-sources.jar'
 	exclude 'application.xml'
 }
